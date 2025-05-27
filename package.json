@@ -1,0 +1,12 @@
+{
+  "name": "plombierpro",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "live-server dist/",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0",
+    "live-server": "^1.2.2"
+  }
+}
