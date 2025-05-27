@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlombierPro - Services de Plomberie Professionnels en France</title>
+    <meta name="description" content="Services de plomberie professionnels en France. Intervention rapide, devis gratuit, équipe expérimentée.">
+    <meta name="keywords" content="plombier, plomberie, réparation, installation, urgence, Paris, France">
+    <meta name="author" content="PlombierPro">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://plombierpro.fr/">
+    <meta property="og:title" content="PlombierPro - Services de Plomberie Professionnels">
+    <meta property="og:description" content="Services de plomberie professionnels en France. Intervention rapide 24/7.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://plombierpro.fr/">
+    <meta property="twitter:title" content="PlombierPro - Services de Plomberie Professionnels">
+    <meta property="twitter:description" content="Services de plomberie professionnels en France. Intervention rapide 24/7.">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'plumber-blue': '#2563eb',
+                        'plumber-green': '#10b981',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #4A90E2 0%, #50C9C3 100%);
+        }
+        
+        .hero-shape {
+            clip-path: ellipse(70% 100% at 100% 0%);
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .btn-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .btn-hover:hover {
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-shape {
+                clip-path: none;
+            }
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Loading animation */
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Top Header Bar -->
+    <div class="bg-plumber-blue text-white py-2 px-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-sm">
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    <span class="hidden sm:inline">123 Rue de la Paix, 75001 Paris, France</span>
+                    <span class="sm:hidden">Paris, France</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-phone mr-2"></i>
+                    <span>+33 1 42 86 83 00</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#" class="hover:text-blue-200 transition-colors" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="hover:text-blue-200 transition-colors" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="hover:text-blue-200 transition-colors" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="hover:text-blue-200 transition-colors" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-lg relative z-50 sticky top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold text-plumber-blue">PlombierPro</h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex space-x-8" role="navigation">
+                    <a href="#accueil" class="text-gray-700 hover:text-plumber-blue px-3 py-2 text-sm font-medium transition-colors">À Propos</a>
+                    <a href="#services" class="text-gray-700 hover:text-plumber-blue px-3 py-2 text-sm font-medium transition-colors">Services</a>
+                    <a href="#temoignages" class="text-gray-700 hover:text-plumber-blue px-3 py-2 text-sm font-medium transition-colors">Témoignages</a>
+                    <a href="#blog" class="text-gray-700 hover:text-plumber-blue px-3 py-2 text-sm font-medium transition-colors">Blog</a>
+                    <a href="#contact" class="text-gray-700 hover:text-plumber-blue px-3 py-2 text-sm font-medium transition-colors">Contact</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <button class="bg-plumber-green hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium btn-hover" onclick="openQuoteModal()">
+                        Demander un Devis
+                    </button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="lg:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-plumber-blue focus:outline-none" aria-label="Menu mobile">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="#accueil" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue">À Propos</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue">Services</a>
+                <a href="#temoignages" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue">Témoignages</a>
+                <a href="#blog" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue">Blog</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue">Contact</a>
+                <div class="pt-4">
+                    <button class="w-full bg-plumber-green hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium transition-all" onclick="openQuoteModal()">
+                        Demander un Devis
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="relative overflow-hidden">
+        <div class="hero-gradient hero-shape min-h-screen flex items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <!-- Content -->
+                    <div class="text-white fade-in">
+                        <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
+                            Une maison saine commence par une plomberie parfaite.
+                        </h1>
+                        <p class="text-xl lg:text-2xl mb-8 text-blue-100">
+                            Bienvenue chez PlombierPro, où la confiance et la qualité sont nos priorités.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <button class="bg-plumber-green hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium btn-hover" onclick="openQuoteModal()">
+                                Demander un Devis
+                            </button>
+                            <button class="bg-white hover:bg-gray-100 text-plumber-blue px-8 py-4 rounded-lg font-medium transition-all border-2 border-white" onclick="callNow()">
+                                <i class="fas fa-phone mr-2"></i>
+                                Appeler Maintenant
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="hidden lg:block fade-in">
+                        <img 
+                            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                            alt="Plombier professionnel au travail"
+                            class="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+                <!-- Left Content -->
+                <div class="fade-in">
+                    <div class="text-sm uppercase tracking-wider text-plumber-blue font-semibold mb-4">
+                        NOTRE ENTREPRISE
+                    </div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                        Bienvenue chez PlombierPro
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Excellence en plomberie au cœur de Paris. Notre équipe de plombiers certifiés offre des services de qualité supérieure avec plus de 15 ans d'expérience dans le domaine.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 bg-plumber-blue rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-900">Intervention Rapide</h4>
+                                <p class="text-gray-600">Service d'urgence 24h/24 et 7j/7 pour tous vos besoins.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 bg-plumber-blue rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-900">Équipe Certifiée</h4>
+                                <p class="text-gray-600">Plombiers qualifiés et assurés pour votre tranquillité d'esprit.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-6 h-6 bg-plumber-blue rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-check text-white text-xs"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-semibold text-gray-900">Garantie Qualité</h4>
+                                <p class="text-gray-600">Tous nos travaux sont garantis et réalisés selon les normes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content - Feature Cards -->
+                <div class="space-y-8">
+                    <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-plumber-blue rounded-full flex items-center justify-center">
+                                <i class="fas fa-home text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 ml-4">
+                                Tout Sous Un Même Toit
+                            </h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Nos services complets vous permettent de recevoir tous les soins de plomberie nécessaires directement dans nos locaux modernes - des réparations d'urgence aux installations complètes.
+                        </p>
+                    </div>
+
+                    <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-plumber-blue rounded-full flex items-center justify-center">
+                                <i class="fas fa-users text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 ml-4">
+                                Approche Centrée Client
+                            </h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Nous croyons que chaque client mérite une attention personnalisée. Notre équipe prend le temps de comprendre vos besoins spécifiques et vous propose des solutions adaptées.
+                        </p>
+                    </div>
+
+                    <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-plumber-blue rounded-full flex items-center justify-center">
+                                <i class="fas fa-tools text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 ml-4">
+                                Équipement Moderne
+                            </h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Nous utilisons les dernières technologies et équipements pour diagnostiquer et résoudre vos problèmes de plomberie rapidement et efficacement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="text-sm uppercase tracking-wider text-plumber-blue font-semibold mb-4">
+                    NOS SERVICES
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    Services de Plomberie Complets
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    De la réparation d'urgence à l'installation complète, nous offrons une gamme complète de services de plomberie pour répondre à tous vos besoins.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-wrench text-plumber-blue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Réparations d'Urgence</h3>
+                    <p class="text-gray-600 mb-6">
+                        Intervention rapide 24h/24 pour tous vos problèmes de plomberie urgents. Fuites, canalisations bouchées, chauffe-eau en panne.
+                    </p>
+                    <button class="text-plumber-blue font-semibold hover:text-blue-700 transition-colors">
+                        En savoir plus <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-shower text-plumber-blue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Installation Sanitaire</h3>
+                    <p class="text-gray-600 mb-6">
+                        Installation complète de salles de bains, cuisines, et tous équipements sanitaires avec garantie de qualité supérieure.
+                    </p>
+                    <button class="text-plumber-blue font-semibold hover:text-blue-700 transition-colors">
+                        En savoir plus <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-fire text-plumber-blue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Chauffage</h3>
+                    <p class="text-gray-600 mb-6">
+                        Installation, maintenance et réparation de systèmes de chauffage. Chaudières, radiateurs, plancher chauffant.
+                    </p>
+                    <button class="text-plumber-blue font-semibold hover:text-blue-700 transition-colors">
+                        En savoir plus <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-tint text-plumber-blue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Débouchage</h3>
+                    <p class="text-gray-600 mb-6">
+                        Débouchage professionnel de canalisations, éviers, WC et systèmes d'évacuation avec équipement spécialisé haute pression.
+                    </p>
+                    <button class="text-plumber-blue font-semibold hover:text-blue-700 transition-colors">
+                        En savoir plus <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-thermometer-half text-plumber-blue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Chauffe-eau</h3>
+                    <p class="text-gray-600 mb-6">
+                        Installation, réparation et maintenance de chauffe-eau électriques, gaz et thermodynamiques. Service rapide et efficace.
+                    </p>
+                    <button class="text-plumber-blue font-semibold hover:text-blue-700 transition-colors">
+                        En savoir plus <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+
+                <div class="card bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-plumber-blue text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Diagnostic</h3>
+                    <p class="text-gray-600 mb-6">
+                        Diagnostic complet de vos installations avec caméra d'inspection et détection de fuites non destructive par thermographie.
+                    </p>
+                    <button class="text-plumber-blue font-semibold hover:text-blue-700 transition-colors">
+                        En savoir plus <i class="fas fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="temoignages" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="text-sm uppercase tracking-wider text-plumber-blue font-semibold mb-4">
+                    TÉMOIGNAGES
+                </div>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    Ce Que Disent Nos Clients
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    La satisfaction de nos clients est notre priorité. Découvrez leurs témoignages sur nos services.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card bg-gray-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "Service exceptionnel ! Intervention rapide pour une fuite d'urgence. Équipe professionnelle et tarifs transparents."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-plumber-blue rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold">MR</span>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-900">Marie Rousseau</h4>
+                            <p class="text-gray-500 text-sm">Paris 15ème</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-gray-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "Installation complète de ma salle de bain. Travail soigné, respect des délais et excellent conseil. Je recommande !"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-plumber-blue rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold">JD</span>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-900">Jean Dupont</h4>
+                            <p class="text-gray-500 text-sm">Neuilly-sur-Seine</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-gray-50 p-8 rounded-2xl">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">
+                        "Dépannage chauffe-eau un dimanche soir. Intervention en moins d'une heure. Service client remarquable !"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-plumber-blue rounded-full flex items-center justify-center">
+                            <span class="text-white font-bold">SL</span>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-900">Sophie Leroy</h4>
+                            <p class="text-gray-500 text-sm">Boulogne-Billancourt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 hero-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+                Besoin d'un Plombier Professionnel ?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Contactez-nous dès maintenant pour un devis gratuit et une intervention rapide. Service d'urgence disponible 24h/24.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-plumber-green hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium btn-hover" onclick="openQuoteModal()">
+                    <i class="fas fa-file-alt mr-2"></i>
+                    Devis Gratuit
+                </button>
+                <button class="bg-white hover:bg-gray-100 text-plumber-blue px-8 py-4 rounded-lg font-medium transition-all" onclick="callNow()">
+                    <i class="fas fa-phone mr-2"></i>
+                    Appeler Maintenant
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold text-blue-400 mb-6">PlombierPro</h3>
+                    <p class="text-gray-300 mb-6">
+                        Votre partenaire de confiance pour tous vos besoins en plomberie. Service professionnel et fiable depuis plus de 15 ans dans la région parisienne.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Services</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Réparations d'Urgence</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Installation Sanitaire</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Chauffage</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Débouchage</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Chauffe-eau</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Diagnostic</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Liens Rapides</h4>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><a href="#accueil" class="hover:text-blue-400 transition-colors">Accueil</a></li>
+                        <li><a href="#about" class="hover:text-blue-400 transition-colors">À Propos</a></li>
+                        <li><a href="#services" class="hover:text-blue-400 transition-colors">Services</a></li>
+                        <li><a href="#temoignages" class="hover:text-blue-400 transition-colors">Témoignages</a></li>
+                        <li><a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors">Mentions Légales</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Contact</h4>
+                    <div class="space-y-3 text-gray-300">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                            <span>123 Rue de la Paix<br>75001 Paris, France</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone mr-3"></i>
+                            <span>+33 1 42 86 83 00</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>contact@plombierpro.fr</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock mr-3"></i>
+                            <span>24h/24 - 7j/7</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt mr-3"></i>
+                            <span>Assurance décennale</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 PlombierPro. Tous droits réservés. | Développé avec ❤️ en France | SIRET: 123 456 789 00012</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quote Modal -->
+    <div id="quote-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-8 transform transition-all">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-bold text-gray-900">Demander un Devis</h3>
+                <button onclick="closeQuoteModal()" class="text-gray-400 hover:text-gray-600" aria-label="Fermer">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <form id="quote-form" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Nom complet *</label>
+                    <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-plumber-blue focus:border-transparent" placeholder="Votre nom complet">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Téléphone *</label>
+                    <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-plumber-blue focus:border-transparent" placeholder="+33 1 23 45 67 89">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-plumber-blue focus:border-transparent" placeholder="votre@email.fr">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Type de service *</label>
+                    <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-plumber-blue focus:border-transparent">
+                        <option value="">Sélectionnez un service</option>
+                        <option value="urgence">Réparation d'urgence</option>
+                        <option value="installation">Installation sanitaire</option>
+                        <option value="chauffage">Chauffage</option>
+                        <option value="debouchage">Débouchage</option>
+                        <option value="chauffe-eau">Chauffe-eau</option>
+                        <option value="diagnostic">Diagnostic</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Description du problème</label>
+                    <textarea rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-plumber-blue focus:border-transparent" placeholder="Décrivez votre problème ou votre projet..."></textarea>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Urgence</label>
+                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-plumber-blue focus:border-transparent">
+                        <option value="normal">Normal (sous 48h)</option>
+                        <option value="urgent">Urgent (sous 24h)</option>
+                        <option value="tres-urgent">Très urgent (sous 4h)</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-plumber-green hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium transition-all">
+                    <i class="fas fa-paper-plane mr-2"></i>
+                    Envoyer la demande
+                </button>
+                <p class="text-xs text-gray-500 text-center">
+                    * Champs obligatoires. Nous vous contacterons dans les plus brefs délais.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
