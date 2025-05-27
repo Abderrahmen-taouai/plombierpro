@@ -225,26 +225,23 @@
             >
           </nav>
 
-          <!-- CTA Button -->
-          <div class="hidden lg:block">
-            <button
-              class="bg-plumber-green hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium btn-hover"
-              onclick="openQuoteModal()"
-            >
-              Demander un Devis
-            </button>
-          </div>
+       
+          <!-- Mobile Button -->
+<div class="lg:hidden">
+  <button id="mobile-menu-button" class="text-gray-700 hover:text-plumber-blue focus:outline-none" aria-label="Menu mobile">
+    <i class="fas fa-bars text-xl"></i>
+  </button>
+</div>
 
-          <!-- Mobile menu button -->
-          <div class="lg:hidden">
-            <button
-              id="mobile-menu-button"
-              class="text-gray-700 hover:text-plumber-blue focus:outline-none"
-              aria-label="Menu mobile"
-            >
-              <i class="fas fa-bars text-xl"></i>
-            </button>
-          </div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="lg:hidden hidden bg-white border-t">
+  <div class="px-4 pt-2 pb-3 space-y-1">
+    <a href="#accueil" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue">À Propos</a>
+    <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue">Services</a>
+    <a href="#temoignages" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue">Témoignages</a>
+    <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue">Contact</a>
+  </div>
+</div>
         </div>
       </div>
 
@@ -276,14 +273,7 @@
             class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue"
             >Contact</a
           >
-          <div class="pt-4">
-            <button
-              class="w-full bg-plumber-green hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium transition-all"
-              onclick="openQuoteModal()"
-            >
-              Demander un Devis
-            </button>
-          </div>
+          
         </div>
       </div>
     </nav>
@@ -700,13 +690,7 @@
           intervention rapide. Service d'urgence disponible 24h/24.
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <button
-            class="bg-plumber-green hover:bg-green-600 text-white px-8 py-4 rounded-lg font-medium btn-hover"
-            onclick="openQuoteModal()"
-          >
-            <i class="fas fa-file-alt mr-2"></i>
-            Devis Gratuit
-          </button>
+         
           <button
             class="bg-white hover:bg-gray-100 text-plumber-blue px-8 py-4 rounded-lg font-medium transition-all"
             onclick="callNow()"
@@ -883,16 +867,7 @@
       <div
         class="bg-white rounded-2xl max-w-md w-full p-8 transform transition-all"
       >
-        <div class="flex justify-between items-center mb-6">
-          <h3 class="text-2xl font-bold text-gray-900">Demander un Devis</h3>
-          <button
-            onclick="closeQuoteModal()"
-            class="text-gray-400 hover:text-gray-600"
-            aria-label="Fermer"
-          >
-            <i class="fas fa-times text-xl"></i>
-          </button>
-        </div>
+        
         <form id="quote-form" class="space-y-4">
           <div>
             <label class="block text-sm font-medium text-gray-700 mb-2"
