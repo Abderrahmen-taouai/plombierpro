@@ -35,7 +35,7 @@
       property="twitter:description"
       content="Services de plomberie professionnels en France. Intervention rapide 24/7."
     />
-
+<script src="script.js"></script>
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -45,6 +45,9 @@
             colors: {
               "plumber-blue": "#2563eb",
               "plumber-green": "#10b981",
+              "rennes-gray": "#6b7280",
+              "rennes-orange": "#f97316",
+              "rennes-red": "#dc2626",
             },
             fontFamily: {
               sans: ["Inter", "system-ui", "sans-serif"],
@@ -197,7 +200,6 @@
             <h1 class="text-2xl font-bold text-plumber-blue ml-2">BS-SANI-CHAUF</h1>
           </div>
 
-
           <!-- Desktop Navigation -->
           <nav class="hidden lg:flex space-x-8" role="navigation">
             <a
@@ -227,55 +229,28 @@
             >
           </nav>
 
-       
           <!-- Mobile Button -->
-<div class="lg:hidden">
-  <button id="mobile-menu-button" class="text-gray-700 hover:text-plumber-blue focus:outline-none" aria-label="Menu mobile">
-    <i class="fas fa-bars text-xl"></i>
-  </button>
-</div>
-
-<!-- Mobile Menu -->
-<div id="mobile-menu" class="lg:hidden hidden bg-white border-t">
-  <div class="px-4 pt-2 pb-3 space-y-1">
-    <a href="#accueil" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue">À Propos</a>
-    <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue">Services</a>
-    <a href="#temoignages" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue">Témoignages</a>
-    <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue">Contact</a>
-  </div>
-</div>
+          <div class="lg:hidden">
+            <button id="mobile-menu-button" class="text-gray-700 hover:text-plumber-blue focus:outline-none" aria-label="Menu mobile">
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
         </div>
       </div>
 
-      <!-- Mobile Navigation -->
-      <div id="mobile-menu" class="lg:hidden hidden bg-white border-t">
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="lg:hidden bg-white border-t border-gray-200 hidden">
         <div class="px-4 pt-2 pb-3 space-y-1">
-          <a
-            href="#accueil"
-            class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue"
-            >À Propos</a
-          >
-          <a
-            href="#services"
-            class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue"
-            >Services</a
-          >
-          <a
-            href="#temoignages"
-            class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue"
-            >Témoignages</a
-          >
-          <a
-            href="#blog"
-            class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue"
-            >Blog</a
-          >
-          <a
-            href="#contact"
-            class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-plumber-blue"
-            >Contact</a
-          >
-          
+          <a href="#accueil" class="block px-3 py-3 text-base font-medium text-rennes-gray hover:text-plumber-blue border-l-4 border-transparent hover:border-plumber-blue">Accueil</a>
+          <a href="#services" class="block px-3 py-3 text-base font-medium text-rennes-gray hover:text-plumber-blue border-l-4 border-transparent hover:border-plumber-blue">Services</a>
+          <a href="#temoignages" class="block px-3 py-3 text-base font-medium text-rennes-gray hover:text-plumber-blue border-l-4 border-transparent hover:border-plumber-blue">Témoignages</a>
+          <a href="#blog" class="block px-3 py-3 text-base font-medium text-rennes-gray hover:text-plumber-blue border-l-4 border-transparent hover:border-plumber-blue">Blog</a>
+          <a href="#contact" class="block px-3 py-3 text-base font-medium text-rennes-gray hover:text-plumber-blue border-l-4 border-transparent hover:border-plumber-blue">Contact</a>
+          <div class="pt-4 pb-2">
+            <button class="w-full bg-plumber-blue hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-semibold transition-all" onclick="callNow()">
+              <i class="fas fa-phone mr-2"></i>Appeler Maintenant
+            </button>
+          </div>
         </div>
       </div>
     </nav>
@@ -958,6 +933,6 @@
       </div>
     </div>
 
-    <script src="./script.js"></script>
+   
   </body>
 </html>
