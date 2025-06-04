@@ -17,7 +17,10 @@ function openQuoteModal() {
       function callNow() {
         window.location.href = "tel:+33142868300";
       }
-
+      // Function to initiate a phone call
+      function callNowAcceuil() {
+        window.location.href = "tel:0679456987";
+      }
       // Ensure DOM is fully loaded
       document.addEventListener("DOMContentLoaded", () => {
         // Mobile menu functionality
